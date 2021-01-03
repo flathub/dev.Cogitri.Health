@@ -125,8 +125,9 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/Cogitri/gnome-health/uploads/ea99fd3d68d8c38c2b2b7816ac44cb41/dev.Cogitri.Health-0.90.0.tar.xz",
-                    "sha256" : "2f03d4685483908ee0e5cf022e15b286b597122891b829370f9e9452292afa07"
+                    "url" : "https://gitlab.gnome.org/Cogitri/gnome-health/-/package_files/48/download",
+                    "dest-filename": "health.tar.xz",
+                    "sha256" : "8802b10517c97a613aa8fd328b0053d1b293dc81088a54cffc62422c240e5d2e"
                 },
                 {
                     "type": "file",
