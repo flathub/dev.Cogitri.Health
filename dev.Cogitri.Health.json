@@ -97,10 +97,13 @@
             ],
             "sources" : [
                 {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/Cogitri/libhandy.git",
-                    "branch" : "gtk4",
-                    "commit" : "2f2f7f512c6b41f75316f0462037f87b9776dece"
+                    "type": "archive",
+                    "url": "https://gitlab.gnome.org/Cogitri/libhandy/-/archive/gtk-2021-01-04/libhandy-gtk-2021-01-04.tar.gz",
+                    "sha256": "edc9c1326b8dc8cc7aeb3d99fc9e8241c6e6e30a340ffe5e0b2b2a5f596b7cab"
+                },
+                {
+                    "type": "patch",
+                    "path": "libhandy-dark-theme.patch"
                 }
             ]
         },
@@ -125,9 +128,9 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/Cogitri/gnome-health/-/package_files/48/download",
-                    "dest-filename": "health.tar.xz",
-                    "sha256" : "8802b10517c97a613aa8fd328b0053d1b293dc81088a54cffc62422c240e5d2e"
+                    "url" : "https://gitlab.gnome.org/Cogitri/gnome-health/-/package_files/52/download",
+                    "dest-filename": "dev.Cogitri.Health-0.90.2.tar.xz",
+                    "sha256" : "751cc4755b3e9926e46ec9e765e1cb88016f5ebe6b597a472519ecd7104af1c2"
                 },
                 {
                     "type": "file",
