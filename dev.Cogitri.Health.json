@@ -82,13 +82,13 @@
             "sources" :  [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gtk/4.0/gtk-4.0.0.tar.xz",
-                    "sha256" : "d46cf5b127ea27dd9e5d2ff6ed500cb4067eeb2cb1cd2c313ccde8013b0b9bf9"
+                    "url" : "https://download.gnome.org/sources/gtk/4.0/gtk-4.0.2.tar.xz",
+                    "sha256" : "626707ac6751426ed76fed49c5b2d052dfee45757ce3827088ba87ca7f1dbc84"
                 }
             ]
         },
         {
-            "name" : "libhandy",
+            "name" : "libadwaita",
             "buildsystem": "meson",
             "config-opts" : [
                 "-Dexamples=false",
@@ -96,13 +96,13 @@
             ],
             "sources" : [
                 {
-                    "type": "archive",
-                    "url": "https://gitlab.gnome.org/Cogitri/libhandy/-/archive/gtk-2021-01-04/libhandy-gtk-2021-01-04.tar.gz",
-                    "sha256": "edc9c1326b8dc8cc7aeb3d99fc9e8241c6e6e30a340ffe5e0b2b2a5f596b7cab"
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/exalm/libadwaita",
+                    "commit": "3733ab6625e414dcf1c76175872a9a8d92de27c6"
                 },
                 {
                     "type": "patch",
-                    "path": "libhandy-dark-theme.patch"
+                    "path": "libadwaita-dark-theme.patch"
                 }
             ]
         },
@@ -127,9 +127,9 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/Cogitri/gnome-health/-/package_files/52/download",
-                    "dest-filename": "dev.Cogitri.Health-0.90.2.tar.xz",
-                    "sha256" : "751cc4755b3e9926e46ec9e765e1cb88016f5ebe6b597a472519ecd7104af1c2"
+                    "url" : "https://gitlab.gnome.org/Cogitri/gnome-health/-/package_files/53/download",
+                    "dest-filename": "dev.Cogitri.Health-0.91.0.tar.xz",
+                    "sha256": "fce7000c3f690742610f4ca33cceba5e059cf7a0fe421a4a99c255a250154267"
                 },
                 {
                     "type": "file",
