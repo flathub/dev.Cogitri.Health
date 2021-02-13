@@ -98,11 +98,7 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/exalm/libadwaita",
-                    "commit": "3733ab6625e414dcf1c76175872a9a8d92de27c6"
-                },
-                {
-                    "type": "patch",
-                    "path": "libadwaita-dark-theme.patch"
+                    "commit": "fca6c26b4faa5e2d860128736595cb1232d4739a"
                 }
             ]
         },
