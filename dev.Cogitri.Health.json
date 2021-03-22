@@ -3,6 +3,9 @@
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "3.38",
     "sdk" : "org.gnome.Sdk",
+    "sdk-extensions": [
+        "org.freedesktop.Sdk.Extension.rust-stable"
+    ],
     "command" : "dev.Cogitri.Health",
     "finish-args" : [
         "--share=ipc",
@@ -22,13 +25,17 @@
         "/share/vala",
         "*.la",
         "*.a",
-        "/lib/librest-extras*",
         "/lib/girepository-1.0",
-        "/share/gir-1.0",
-        "/bin/gtk4*",
-        "/bin/pango*",
-        "/bin/sassc"
+        "/share/gir-1.0"
     ],
+    "build-options": {
+        "append-path": "/usr/lib/sdk/rust-stable/bin",
+        "env": {
+            "CARGO_HOME": "/run/build/Health/cargo",
+            "RUSTFLAGS" : "-L=/app/lib",
+            "RUST_BACKTRACE": "1"
+        }
+    },
     "modules" : [
         {
             "name" : "pango",
@@ -36,8 +43,8 @@
             "sources" :  [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/pango/1.48/pango-1.48.2.tar.xz",
-                    "sha256" : "d21f8b30dc8abdfc55de25656ecb88dc1105eeeb315e5e2a980dcef8010c2c80"
+                    "url" : "https://download.gnome.org/sources/pango/1.48/pango-1.48.3.tar.xz",
+                    "sha256" : "36ea145c82217c8efc954d02aa577391b1d9a5da205e0aef7ffe0461349b4b46"
                 }
             ]
         },
@@ -88,54 +95,35 @@
             ]
         },
         {
-            "name" : "libadwaita",
+            "name": "libadwaita",
+            "builddir": true,
             "buildsystem": "meson",
-            "config-opts" : [
+            "config-opts": [
+                "-Dprofiling=false",
+                "-Dintrospection=enabled",
+                "-Dgtk_doc=false",
+                "-Dtests=false",
                 "-Dexamples=false",
-                "-Dtests=false"
+                "-Dvapi=false",
+                "-Dglade_catalog=disabled"
             ],
-            "sources" : [
+            "sources": [
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/exalm/libadwaita",
-                    "commit": "fca6c26b4faa5e2d860128736595cb1232d4739a"
-                }
-            ]
-        },
-        {
-            "name": "rest",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/rest/0.8/rest-0.8.1.tar.xz",
-                    "sha256": "0513aad38e5d3cedd4ae3c551634e3be1b9baaa79775e53b2dba9456f15b01c9"
+                    "commit": "660d529a6abb571fb592353f67d56915cb5abe54"
                 }
             ]
         },
         {
             "name" : "Health",
             "buildsystem" : "meson",
-            "build-options": {
-            	"env": {
-            	    "VALAFLAGS": "--vapidir=../"
-            	}
-            },
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/Cogitri/gnome-health/-/package_files/53/download",
-                    "dest-filename": "dev.Cogitri.Health-0.91.0.tar.xz",
-                    "sha256": "fce7000c3f690742610f4ca33cceba5e059cf7a0fe421a4a99c255a250154267"
-                },
-                {
-                    "type": "file",
-                    "url": "https://gitlab.gnome.org/GNOME/vala/-/raw/17f12b289bdd6224770dbf296dcd8b7b5632bdde/vapi/gtk4.vapi",
-                    "sha256": "235c290b340030fbb3a43d5e1b91f818ab14ed4e7791ba6128d4cea6b8885a48"
-                },
-                {
-                    "type": "file",
-                    "url": "https://gitlab.gnome.org/GNOME/vala/-/raw/ab9f7e36b018492f6f50757673b58663f408754b/vapi/gtk4.deps",
-                    "sha256": "2eeb65edc470f5b3752b82c7971aa6aeeb7083dd4b8bec3e38669a582e39a587"
+                    "url" : "https://gitlab.gnome.org/Cogitri/Health/-/package_files/55/download",
+                    "dest-filename": "Health.tar.xz",
+                    "sha256": "a375668d0ce964555367ab73eff79a4851c24709529c47e1292b9288f3263464"
                 }
             ]
         }
