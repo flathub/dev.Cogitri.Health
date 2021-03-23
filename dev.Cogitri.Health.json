@@ -122,9 +122,9 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/Cogitri/Health/-/package_files/55/download",
-                    "dest-filename": "Health.tar.xz",
-                    "sha256": "a375668d0ce964555367ab73eff79a4851c24709529c47e1292b9288f3263464"
+                    "url" : "https://gitlab.gnome.org/Cogitri/Health/-/package_files/56/download",
+                    "dest-filename": "Health-0.92.6.tar.xz",
+                    "sha256": "52ac3bcd046c6d4181e3c088214a5282926ff47fdf392ee9c0374491d0b89768"
                 }
             ]
         }
