@@ -1,7 +1,7 @@
 {
     "app-id" : "dev.Cogitri.Health",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "40",
+    "runtime-version" : "41",
     "sdk" : "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -54,8 +54,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://gitlab.gnome.org/exalm/libadwaita",
-                    "commit": "660d529a6abb571fb592353f67d56915cb5abe54"
+                    "url": "https://gitlab.gnome.org/GNOME/libadwaita",
+                    "commit": "40c19ab2591763a482ebc79c82f1da32eea3bab6"
                 }
             ]
         },
@@ -65,9 +65,9 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/Cogitri/Health/-/package_files/56/download",
-                    "dest-filename": "Health-0.92.6.tar.xz",
-                    "sha256": "52ac3bcd046c6d4181e3c088214a5282926ff47fdf392ee9c0374491d0b89768"
+                    "url" : "https://gitlab.gnome.org/Cogitri/Health/-/package_files/62/download",
+                    "dest-filename": "Health-0.93.2.tar.xz",
+                    "sha256": "d7c6e774f2f19cadcee24b382ec8fed2d2ae0adaa3ed61879835a3dfb8826d71"
                 }
             ]
         }
