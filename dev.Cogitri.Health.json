@@ -96,9 +96,9 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/World/Health/-/package_files/62/download",
-                    "dest-filename": "Health-0.93.2.tar.xz",
-                    "sha256": "d7c6e774f2f19cadcee24b382ec8fed2d2ae0adaa3ed61879835a3dfb8826d71"
+                    "url" : "https://gitlab.gnome.org/World/Health/-/package_files/63/download",
+                    "dest-filename": "Health-0.93.3.tar.xz",
+                    "sha256": "0d6286addbf5c9b31917d35f9edda79a10e95c2c903f93676cb648dd3b2b7c2f"
                 }
             ]
         }
