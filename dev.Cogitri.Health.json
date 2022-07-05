@@ -40,6 +40,22 @@
     },
     "modules": [
         {
+          "name": "tracker",
+          "buildsystem": "meson",
+          "builddir": true,
+          "config-opts": [
+            "-Dman=false",
+            "-Dsystemd_user_services=false"
+          ],
+          "sources": [
+            {
+              "type": "archive",
+              "url": "https://download.gnome.org/sources/tracker/3.3/tracker-3.3.0.tar.xz",
+              "sha512": "0a55a80b44c2267f149c4c83ecbe42ca27a0645bd4fc206984999520f6bed3b7c63c71f81450f40ce2896223ce17326add20e7f39a71c821d754f30b8ce157bc"
+            }
+          ]
+        },
+        {
             "name": "Health",
             "buildsystem": "meson",
             "sources": [
