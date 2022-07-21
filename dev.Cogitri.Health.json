@@ -40,20 +40,32 @@
     },
     "modules": [
         {
-          "name": "tracker",
-          "buildsystem": "meson",
-          "builddir": true,
-          "config-opts": [
-            "-Dman=false",
-            "-Dsystemd_user_services=false"
-          ],
-          "sources": [
-            {
-              "type": "archive",
-              "url": "https://download.gnome.org/sources/tracker/3.3/tracker-3.3.0.tar.xz",
-              "sha512": "0a55a80b44c2267f149c4c83ecbe42ca27a0645bd4fc206984999520f6bed3b7c63c71f81450f40ce2896223ce17326add20e7f39a71c821d754f30b8ce157bc"
-            }
-          ]
+            "name": "blueprintcompiler",
+            "buildsystem": "meson",
+            "builddir": true,
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
+                    "commit": "93f2a27e35905420e70bfdb5c2f04d6af43b357d"
+                }
+            ]
+        },
+        {
+            "name": "tracker",
+            "buildsystem": "meson",
+            "builddir": true,
+            "config-opts": [
+                "-Dman=false",
+                "-Dsystemd_user_services=false"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/tracker/3.3/tracker-3.3.2.tar.xz",
+                    "sha512": "2009c7a9b82fd278e38bc71cb41ef1fccb23493bd84a71456c7568ed7a025ce68bab689b8f14b8008479a203a5fdc02acea1862f4f482467ed5c295bde3d4ad8"
+                }
+            ]
         },
         {
             "name": "Health",
@@ -61,9 +73,9 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.gnome.org/World/Health/-/package_files/63/download",
+                    "url": "https://gitlab.gnome.org/World/Health/-/package_files/137/download",
                     "archive-type": "tar-xz",
-                    "sha256": "0d6286addbf5c9b31917d35f9edda79a10e95c2c903f93676cb648dd3b2b7c2f",
+                    "sha256": "bc262e62b5a193344034d41dab0a0232309cd18afe17240110e351d07f3eb33b",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://gitlab.gnome.org/api/v4/projects/World%2FHealth/releases",
