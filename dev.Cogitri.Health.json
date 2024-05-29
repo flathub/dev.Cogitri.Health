@@ -1,7 +1,7 @@
 {
     "app-id": "dev.Cogitri.Health",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "44",
+    "runtime-version": "46",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable",
@@ -66,6 +66,10 @@
                     "type": "archive",
                     "url": "https://gitlab.gnome.org/World/Health/uploads/5c2f3e11a5fff57edb2238ff3df1c742/Health-0.95.0.tar.xz",
                     "sha256": "48108b55456b340ac32fa2671597fb5ca010b67117bb7c0ade4e1cdaf5ab152d"
+                },
+                {
+                    "type": "patch",
+                    "path": "fix_appdata.patch"
                 }
             ]
         }
